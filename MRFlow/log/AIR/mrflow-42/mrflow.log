@@ -1,0 +1,133 @@
+2025-10-21 18:36:48,305 - logger name:log/AIR/mrflow-42/mrflow.log
+2025-10-21 18:36:48,306 - params : {'num_stages': 3, 'window_sizes': [12, 6, 3], 'compression_rates': [0.8, 0.6, 0.2], 'prompt_dim': 32, 'num_periods': 10, 'epochs_per_period': 50, 'conf': 'conf/AIR/mrflow.json', 'seed': 42, 'paral': 0, 'gpuid': 0, 'logname': 'mrflow', 'method': 'MRFlow', 'load_first_year': 0, 'first_year_model_path': 'log/PEMS/eac-43/2011/14.7956.pkl', 'device': device(type='cuda', index=0), 'methods': {'MRFlow': <class 'src.model.model.MRFlow_Model'>, 'TrafficStream': <class 'src.model.model.TrafficStream_Model'>, 'STKEC': <class 'src.model.model.STKEC_Model'>, 'EAC': <class 'src.model.model.EAC_Model'>, 'Universal': <class 'src.model.model.Universal_Model'>}, 'begin_year': 2016, 'end_year': 2019, 'dropout': 0.0, 'lr': 0.03, 'batch_size': 64, 'epoch': 100, 'loss': 'mse', 'activation': 'relu', 'scheduler': 'epo', 'y_len': 12, 'x_len': 12, 'data_process': 1, 'raw_data_path': 'data/AIR/RawData/', 'save_data_path': 'data/AIR/FastData/', 'graph_path': 'data/AIR/graph/', 'model_path': 'log/AIR/', 'gcn': {'in_channel': 12, 'out_channel': 12, 'hidden_channel': 64}, 'tcn': {'in_channel': 1, 'out_channel': 1, 'kernel_size': 3, 'dilation': 1}, 'init': True, 'train': 1, 'auto_test': 0, 'strategy': 'retrain', 'detect': False, 'ewc': False, 'replay': False, 'path': 'log/AIR/mrflow-42', 'logger': <Logger utils.initialize (INFO)>}
+2025-10-21 18:36:53,694 - [*] Year 2016 load from data/AIR/FastData/2016.npz
+2025-10-21 18:36:56,087 - [*] Year 2016 Dataset load!
+2025-10-21 18:36:56,095 - Total Parameters: 107756
+2025-10-21 18:36:56,095 - Trainable Parameters: 107756
+2025-10-21 18:36:56,096 - [*] Year 2016 Training start
+2025-10-21 18:36:56,460 - node number torch.Size([69568, 12])
+2025-10-21 18:37:03,777 - epoch:0, training loss:2621.1984 validation loss:36.5004
+2025-10-21 18:37:07,784 - epoch:1, training loss:1291.7742 validation loss:25.3380
+2025-10-21 18:37:11,795 - epoch:2, training loss:1269.7119 validation loss:30.5735
+2025-10-21 18:37:15,768 - epoch:3, training loss:1249.9184 validation loss:26.9414
+2025-10-21 18:37:19,773 - epoch:4, training loss:1233.4778 validation loss:22.8761
+2025-10-21 18:37:23,700 - epoch:5, training loss:1250.4583 validation loss:27.9446
+2025-10-21 18:37:27,802 - epoch:6, training loss:1260.5710 validation loss:25.5232
+2025-10-21 18:37:31,776 - epoch:7, training loss:1233.7230 validation loss:29.5047
+2025-10-21 18:37:35,475 - epoch:8, training loss:1269.5525 validation loss:54.0221
+2025-10-21 18:37:39,490 - epoch:9, training loss:1276.4813 validation loss:32.6770
+2025-10-21 18:37:43,455 - epoch:10, training loss:1241.6983 validation loss:35.9805
+2025-10-21 18:37:44,402 - [*] loss:2229.4626
+2025-10-21 18:37:44,466 - [*] year 2016, testing
+2025-10-21 18:37:45,136 - T:3	MAE	22.5318	RMSE	36.4599	MAPE	23.5139
+2025-10-21 18:37:46,439 - T:6	MAE	25.8128	RMSE	42.0933	MAPE	27.7518
+2025-10-21 18:37:50,721 - T:12	MAE	29.1811	RMSE	47.3488	MAPE	33.0193
+2025-10-21 18:37:50,722 - T:Avg	MAE	25.4842	RMSE	41.3096	MAPE	27.6157
+2025-10-21 18:37:50,723 - Finished optimization, total time:35.13 s, best model:log/AIR/mrflow-42/2016/22.8761.pkl
+2025-10-21 18:37:56,240 - [*] Year 2017 load from data/AIR/FastData/2017.npz
+2025-10-21 18:37:56,275 - [*] Year 2017 Dataset load!
+2025-10-21 18:37:56,276 - [*] load from log/AIR/mrflow-42/2016/22.8761.pkl
+2025-10-21 18:37:56,317 - Total Parameters: 107756
+2025-10-21 18:37:56,317 - Trainable Parameters: 107756
+2025-10-21 18:37:56,317 - [*] Year 2017 Training start
+2025-10-21 18:37:56,986 - node number torch.Size([73856, 12])
+2025-10-21 18:38:01,938 - epoch:0, training loss:1635.2858 validation loss:57.4807
+2025-10-21 18:38:06,204 - epoch:1, training loss:1272.6378 validation loss:42.4328
+2025-10-21 18:38:10,410 - epoch:2, training loss:1247.0904 validation loss:31.9520
+2025-10-21 18:38:14,682 - epoch:3, training loss:1240.1960 validation loss:32.8941
+2025-10-21 18:38:18,859 - epoch:4, training loss:1253.0193 validation loss:30.7956
+2025-10-21 18:38:23,105 - epoch:5, training loss:1247.9112 validation loss:37.6065
+2025-10-21 18:38:27,361 - epoch:6, training loss:1264.7830 validation loss:34.1183
+2025-10-21 18:38:31,806 - epoch:7, training loss:1234.6861 validation loss:27.5518
+2025-10-21 18:38:36,139 - epoch:8, training loss:1227.3543 validation loss:30.2391
+2025-10-21 18:38:40,413 - epoch:9, training loss:1236.8315 validation loss:29.1002
+2025-10-21 18:38:44,676 - epoch:10, training loss:1227.4766 validation loss:29.4145
+2025-10-21 18:38:49,340 - epoch:11, training loss:1237.6385 validation loss:30.6425
+2025-10-21 18:38:53,486 - epoch:12, training loss:1226.2435 validation loss:31.6820
+2025-10-21 18:38:57,717 - epoch:13, training loss:1391.6927 validation loss:53.3627
+2025-10-21 18:38:58,811 - [*] loss:1552.7693
+2025-10-21 18:38:58,908 - [*] year 2017, testing
+2025-10-21 18:38:59,586 - T:3	MAE	18.9873	RMSE	27.3149	MAPE	24.3060
+2025-10-21 18:39:00,970 - T:6	MAE	22.4688	RMSE	33.4992	MAPE	27.4009
+2025-10-21 18:39:05,431 - T:12	MAE	26.1423	RMSE	39.4963	MAPE	31.1731
+2025-10-21 18:39:05,432 - T:Avg	MAE	22.1017	RMSE	32.6439	MAPE	27.2665
+2025-10-21 18:39:05,434 - Finished optimization, total time:44.04 s, best model:log/AIR/mrflow-42/2017/27.5518.pkl
+2025-10-21 18:39:10,489 - [*] Year 2018 load from data/AIR/FastData/2018.npz
+2025-10-21 18:39:10,520 - [*] Year 2018 Dataset load!
+2025-10-21 18:39:10,522 - [*] load from log/AIR/mrflow-42/2017/27.5518.pkl
+2025-10-21 18:39:10,562 - Total Parameters: 107756
+2025-10-21 18:39:10,562 - Trainable Parameters: 107756
+2025-10-21 18:39:10,562 - [*] Year 2018 Training start
+2025-10-21 18:39:11,218 - node number torch.Size([76352, 12])
+2025-10-21 18:39:15,978 - epoch:0, training loss:1206.6094 validation loss:36.7663
+2025-10-21 18:39:21,956 - epoch:1, training loss:1148.4193 validation loss:31.9584
+2025-10-21 18:39:26,347 - epoch:2, training loss:1137.0100 validation loss:30.0052
+2025-10-21 18:39:30,562 - epoch:3, training loss:1128.8566 validation loss:28.7829
+2025-10-21 18:39:34,848 - epoch:4, training loss:1125.4133 validation loss:30.1508
+2025-10-21 18:39:38,846 - epoch:5, training loss:2216.0706 validation loss:188.0240
+2025-10-21 18:39:43,159 - epoch:6, training loss:1291.1102 validation loss:68.9899
+2025-10-21 18:39:47,388 - epoch:7, training loss:1192.0723 validation loss:55.5888
+2025-10-21 18:39:51,544 - epoch:8, training loss:1164.6272 validation loss:50.7151
+2025-10-21 18:39:55,723 - epoch:9, training loss:1171.7628 validation loss:50.0662
+2025-10-21 18:39:56,854 - [*] loss:1097.8051
+2025-10-21 18:39:56,921 - [*] year 2018, testing
+2025-10-21 18:39:57,567 - T:3	MAE	11.7644	RMSE	21.0238	MAPE	19.3103
+2025-10-21 18:39:58,931 - T:6	MAE	15.5105	RMSE	27.1825	MAPE	25.5201
+2025-10-21 18:40:03,374 - T:12	MAE	19.4314	RMSE	33.1864	MAPE	32.7147
+2025-10-21 18:40:03,375 - T:Avg	MAE	15.1263	RMSE	26.3608	MAPE	25.0940
+2025-10-21 18:40:03,377 - Finished optimization, total time:32.36 s, best model:log/AIR/mrflow-42/2018/28.7829.pkl
+2025-10-21 18:40:08,674 - [*] Year 2019 load from data/AIR/FastData/2019.npz
+2025-10-21 18:40:08,703 - [*] Year 2019 Dataset load!
+2025-10-21 18:40:08,705 - [*] load from log/AIR/mrflow-42/2018/28.7829.pkl
+2025-10-21 18:40:08,730 - Total Parameters: 107756
+2025-10-21 18:40:08,730 - Trainable Parameters: 107756
+2025-10-21 18:40:08,731 - [*] Year 2019 Training start
+2025-10-21 18:40:09,398 - node number torch.Size([76928, 12])
+2025-10-21 18:40:15,649 - epoch:0, training loss:948.1755 validation loss:33.4143
+2025-10-21 18:40:20,314 - epoch:1, training loss:891.3253 validation loss:24.6121
+2025-10-21 18:40:24,506 - epoch:2, training loss:882.7721 validation loss:26.6297
+2025-10-21 18:40:28,544 - epoch:3, training loss:886.2097 validation loss:51.8676
+2025-10-21 18:40:32,641 - epoch:4, training loss:928.1925 validation loss:47.9416
+2025-10-21 18:40:36,824 - epoch:5, training loss:895.0451 validation loss:22.7316
+2025-10-21 18:40:41,300 - epoch:6, training loss:883.9880 validation loss:24.6411
+2025-10-21 18:40:45,472 - epoch:7, training loss:885.5396 validation loss:23.7833
+2025-10-21 18:40:49,639 - epoch:8, training loss:885.5290 validation loss:24.5618
+2025-10-21 18:40:53,883 - epoch:9, training loss:875.2793 validation loss:25.7781
+2025-10-21 18:40:57,898 - epoch:10, training loss:880.9280 validation loss:24.2999
+2025-10-21 18:41:02,019 - epoch:11, training loss:874.4713 validation loss:21.9510
+2025-10-21 18:41:06,272 - epoch:12, training loss:882.1638 validation loss:22.9661
+2025-10-21 18:41:10,528 - epoch:13, training loss:877.8880 validation loss:24.0663
+2025-10-21 18:41:14,708 - epoch:14, training loss:878.6804 validation loss:21.8325
+2025-10-21 18:41:19,229 - epoch:15, training loss:876.7552 validation loss:21.8489
+2025-10-21 18:41:23,525 - epoch:16, training loss:880.4651 validation loss:25.0491
+2025-10-21 18:41:27,837 - epoch:17, training loss:871.5924 validation loss:23.5171
+2025-10-21 18:41:32,312 - epoch:18, training loss:867.1710 validation loss:22.6003
+2025-10-21 18:41:36,603 - epoch:19, training loss:872.1157 validation loss:23.8972
+2025-10-21 18:41:40,934 - epoch:20, training loss:873.2523 validation loss:22.8490
+2025-10-21 18:41:42,132 - [*] loss:1096.4669
+2025-10-21 18:41:42,228 - [*] year 2019, testing
+2025-10-21 18:41:42,927 - T:3	MAE	15.0519	RMSE	22.4651	MAPE	22.4045
+2025-10-21 18:41:44,357 - T:6	MAE	18.1541	RMSE	28.0017	MAPE	25.9814
+2025-10-21 18:41:48,914 - T:12	MAE	21.3836	RMSE	33.2169	MAPE	30.5869
+2025-10-21 18:41:48,915 - T:Avg	MAE	17.8465	RMSE	27.2080	MAPE	25.9758
+2025-10-21 18:41:48,917 - Finished optimization, total time:65.58 s, best model:log/AIR/mrflow-42/2019/21.8325.pkl
+2025-10-21 18:41:48,919 - 
+
+
+2025-10-21 18:41:48,919 - 3   	 MAE	     22.53	     18.99	     11.76	     15.05		   17.08
+2025-10-21 18:41:48,919 - 3   	RMSE	     36.46	     27.31	     21.02	     22.47		   26.82
+2025-10-21 18:41:48,919 - 3   	MAPE	     23.51	     24.31	     19.31	     22.40		   22.38
+2025-10-21 18:41:48,920 - 6   	 MAE	     25.81	     22.47	     15.51	     18.15		   20.49
+2025-10-21 18:41:48,920 - 6   	RMSE	     42.09	     33.50	     27.18	     28.00		   32.69
+2025-10-21 18:41:48,920 - 6   	MAPE	     27.75	     27.40	     25.52	     25.98		   26.66
+2025-10-21 18:41:48,920 - 12  	 MAE	     29.18	     26.14	     19.43	     21.38		   24.03
+2025-10-21 18:41:48,921 - 12  	RMSE	     47.35	     39.50	     33.19	     33.22		   38.31
+2025-10-21 18:41:48,921 - 12  	MAPE	     33.02	     31.17	     32.71	     30.59		   31.87
+2025-10-21 18:41:48,921 - Avg 	 MAE	     25.48	     22.10	     15.13	     17.85		   20.14
+2025-10-21 18:41:48,921 - Avg 	RMSE	     41.31	     32.64	     26.36	     27.21		   31.88
+2025-10-21 18:41:48,921 - Avg 	MAPE	     27.62	     27.27	     25.09	     25.98		   26.49
+2025-10-21 18:41:48,922 - year	2016	total_time	   35.1305	average_time	    3.1937	epoch	11
+2025-10-21 18:41:48,922 - year	2017	total_time	   44.0437	average_time	    3.1460	epoch	14
+2025-10-21 18:41:48,922 - year	2018	total_time	   32.3634	average_time	    3.2364	epoch	10
+2025-10-21 18:41:48,922 - year	2019	total_time	   65.5839	average_time	    3.1231	epoch	21
+2025-10-21 18:41:48,922 - total time: 177.1215
